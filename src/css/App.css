@@ -1,5 +1,5 @@
 .app {
-  color: yellow;
-}
-
-/*# sourceMappingURL=App.css.map */
+  min-height: 100%;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}/*# sourceMappingURL=App.css.map */
