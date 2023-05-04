@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+
+.nav-list {
+  display: flex;
+  padding: 0 1rem;
+  gap: 1rem;
+}

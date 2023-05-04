@@ -1,4 +1,12 @@
-const lightPalette = [
+export interface Palette {
+	primary: string;
+	secondary: string;
+	emph: string;
+	text: string;
+	extra: string;
+}
+
+const lightPalettes: Palette[] = [
 	{
 		primary: '#ffffff',
 		secondary: '#F0625F',
@@ -29,4 +37,4 @@ const lightPalette = [
 	},
 ];
 
-export default lightPalette;
+export default lightPalettes;

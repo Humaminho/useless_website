@@ -1,5 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+}
+
+.nav-list {
+  display: flex;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 .app {
   min-height: 100%;
-  color: var(--text-color);
   background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=App.css.map */

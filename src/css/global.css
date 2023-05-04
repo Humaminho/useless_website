@@ -1,8 +1,10 @@
 :root {
 	height: 100%;
 	--primary-color: rgb(231, 231, 231);
-	--secondary-color: rgb(55, 55, 55);
+	--secondary-color: rgb(148, 148, 148);
+  --emphasis-color: rgb(201, 62, 62);
 	--text-color: rgb(0, 0, 0);
+  --extra-color: rgb(255, 255, 255);
 }
 
 #root {
@@ -13,6 +15,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  color: var(--text-color);
 }
 
 body {
