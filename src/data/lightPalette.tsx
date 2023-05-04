@@ -8,7 +8,7 @@ export interface Palette {
 
 const lightPalettes: Palette[] = [
 	{
-		primary: '#ffffff',
+		primary: '#f1faee',
 		secondary: '#F0625F',
 		emph: '#b80c09',
 		text: '#000000',

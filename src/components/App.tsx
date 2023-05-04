@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import lightPalette, { Palette } from '../data/lightPalette.tsx';
 import '../css/App.css';
-import Nav from './Nav.tsx';
+import Header from './Header.tsx';
 import Main from './Main.tsx';
 import Footer from './Footer.tsx';
 
 function App() {
+	const [currentPalette, setCurrentPalette] = useState(0);
+
 	function randomizeNumber(min: number, max: number): number {
 		return Math.floor(Math.random() * (max - min + 1) + min);
 	}
@@ -20,7 +22,7 @@ function App() {
 			palette.secondary
 		);
 		document.documentElement.style.setProperty(
-			'--emph-color',
+			'--emphasis-color',
 			palette.emph
 		);
 		document.documentElement.style.setProperty(
@@ -33,13 +35,24 @@ function App() {
 		);
 	}
 
+	function randomizePalette(): void {
+		const randomNumber: number = randomizeNumber(0, 3);
+		if (randomNumber === currentPalette) {
+			randomizePalette();
+			return;
+		} else {
+			setCurrentPalette(randomNumber);
+			changePalette(lightPalette[randomNumber]);
+		}
+	}
+
 	useEffect(() => {
-		changePalette(lightPalette[randomizeNumber(0, 3)]);
+		randomizePalette();
 	}, []);
 
 	return (
 		<div className="app">
-			<Nav />
+			<Header randomizePalette={randomizePalette} />
 			<Main />
 			<Footer />
 		</div>

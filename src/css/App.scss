@@ -8,6 +8,11 @@ a {
 li {
   list-style: none;
 }
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
 
 .app {
   min-height: 100%;
