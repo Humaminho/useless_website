@@ -1,10 +1,8 @@
-import React from 'react';
-
 interface HeaderProps {
-  randomizePalette: () => void;
+	randomizePalette: () => void;
 }
 
-export default function Header({randomizePalette}: HeaderProps) {
+export default function Header({ randomizePalette }: HeaderProps) {
 	return (
 		<div className="header">
 			<div className="logo" onClick={randomizePalette}></div>
