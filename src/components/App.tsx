@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import lightPalette, { Palette } from '../data/lightPalette.tsx';
 import '../css/App.css';
-import Header from './Header.tsx';
-import Main from './Main.tsx';
+import Header from './header/Header.tsx';
+import Main from './main/Main.tsx';
 import Footer from './Footer.tsx';
 
 function App() {
