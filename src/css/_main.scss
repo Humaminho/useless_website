@@ -3,14 +3,14 @@
 }
 
 .quote-section {
-  max-width: 80%;
-  margin: 120px auto 150px;
-  display: flex;
-  flex-direction: column;
+	max-width: 80%;
+	margin: 120px auto 150px;
+	display: flex;
+	flex-direction: column;
 }
 
 .quote {
-  font-size: 2rem;
+	font-size: 2rem;
 	font-family: 'Montserrat', sans-serif;
 }
 .quote > em {
@@ -19,7 +19,7 @@
 
 .author {
 	font-family: 'EB Garamond', serif;
-  align-self: flex-end;
+	align-self: flex-end;
 }
 
 .cards-section {
@@ -27,35 +27,35 @@
 	flex-direction: column;
 	background-color: var(--secondary-color);
 }
-.cards-section-title {
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
-  gap: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
+.cards-section-title, .gallery-title {
+	display: flex;
+	align-self: flex-start;
+	align-items: center;
+	gap: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--text-color);
 	font-size: 1.5rem;
-  font-weight: bold;
-  min-width: 80%;
-  margin: 6rem auto 2rem;
+	font-weight: bold;
+	min-width: 80%;
+	margin: 6rem auto 2rem;
 }
 .cards {
 	display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 80%;
-  margin: 0 auto 2rem;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 80%;
+	margin: 0 auto 2rem;
 }
 .card {
-  max-width: 340px;
-  margin: 0 auto 4rem;
+	max-width: 340px;
+	margin: 0 auto 4rem;
 	padding: 1.5rem;
 	background-color: var(--primary-color);
-  color: var(--text-color);
+	color: var(--text-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  gap: 1rem;
+	gap: 1rem;
 	justify-content: space-between;
 	text-align: center;
 	box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
@@ -73,59 +73,98 @@
 	font-weight: bold;
 }
 .card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
 }
 .skill-stack {
-  display: flex;
-  justify-content: space-evenly;
-  align-self: stretch;
+	display: flex;
+	justify-content: space-evenly;
+	align-self: stretch;
 }
 .see-more {
-  color: var(--extra-color);
-  font-weight: bolder;
-  &:hover {
-    cursor: pointer;
-    color: var(--emphasis-color);
-  }
+	color: var(--extra-color);
+	font-weight: bolder;
+	&:hover {
+		cursor: pointer;
+		color: var(--emphasis-color);
+	}
+}
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--primary-color);
+}
+.gallery-title {
+  max-width: 80%;
+}
+
+.gallery-content {
+	max-width: 80%;
+	margin: 0 auto 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.gif-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gif {
+	display: block;
+	border-radius: 10px;
+  margin-bottom: 2rem;
+  object-fit: contain;
+  max-width: 500px;
 }
 
 @media screen and (min-width: 576px) {
-  .quote {
-    font-size: 2.2rem;
-  }
-  .author {
-    font-size: 1.1rem;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-  }
-  .card {
-    margin-bottom: 2rem;
-  }
-
+	.quote {
+		font-size: 2.2rem;
+	}
+	.author {
+		font-size: 1.1rem;
+	}
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+	}
+	.card {
+		margin-bottom: 2rem;
+	}
 }
 @media screen and (min-width: 1100px) {
-  .quote {
-    font-size: 2.8rem;
-  }
-  .author {
-    font-size: 1.4rem;
-  }
-  .cards {
-    display: flex;
-    flex-direction: row;
-  }
+	.quote {
+		font-size: 2.8rem;
+	}
+	.author {
+		font-size: 1.4rem;
+	}
+	.cards {
+		display: flex;
+		flex-direction: row;
+	}
+	.gallery-content {
+		flex-direction: row;
+    gap: 2rem;
+	}
+
+	.gif {
+		display: block;
+		height: auto;
+		margin: 0 auto 2rem;
+
+		border-radius: 10px;
+	}
 }
 @media screen and (min-width: 1300px) {
-  :root {
-    font-size: 18px;
-  }
-  .cards {
-    gap: 4rem;
-  }
+	:root {
+		font-size: 18px;
+	}
+	.cards {
+		gap: 4rem;
+	}
 }

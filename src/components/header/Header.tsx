@@ -21,12 +21,12 @@ export default function Header({ randomizePalette }: HeaderProps) {
 					</li>
 					<li>
 						<a href="about" className="link">
-							ABOUT
+							GALLERY
 						</a>
 					</li>
 					<li>
 						<a href="contact me" className="link">
-							CONTACT ME
+							ABOUT
 						</a>
 					</li>
 				</ul>
