@@ -42,8 +42,8 @@
 .burger {
 	color: var(--text-color);
 }
-.burger-nav {
-	position: absolute;
+.burger-nav-container {
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -51,61 +51,66 @@
 	background-color: var(--primary-color);
 	color: var(--text-color);
 	z-index: 100;
-  display: flex;
-  flex-direction: column;
-  transform: translate(100%);
-  opacity: 0;
-  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	transform: translate(100%);
+	transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	opacity: 0;
+  height: 100vh;
 }
-.burger-nav-active {
-  transform: translate(0);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  opacity: 1;
+.burger-nav {
+	display: flex;
+	flex-direction: column;
+}
+.change-display {
+  display: block;
+}
+.burger-nav-container-active {
+	transform: translate(0);
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	opacity: 1;
 }
 .close-burger {
-  align-self: flex-end;
-  margin: 1rem;
+	align-self: flex-end;
+	margin: 1rem;
 }
 .burger-nav-list {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .burger-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.5rem;
-  width: 100%;
-  padding: 1rem;
-  &:hover {
-    background-color: var(--emphasis-color);
-    color: var(--primary-color);
-  }
-  &:active {
-    background-color: var(--emphasis-color);
-    color: var(--primary-color);
-  }
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.5rem;
+	width: 100%;
+	padding: 1rem;
+	&:hover {
+		background-color: var(--emphasis-color);
+		color: var(--primary-color);
+	}
+	&:active {
+		background-color: var(--emphasis-color);
+		color: var(--primary-color);
+	}
 }
 
 .nav-icon {
-  color: inherit;
+	color: inherit;
 }
 
 @media screen and (min-width: 576px) {
-  .burger {
-    display: none;
-  }
-  .nav {
-    display: flex;
-  }
-
+	.burger {
+		display: none;
+	}
+	.nav {
+		display: flex;
+	}
 }
 @media screen and (min-width: 992px) {
-  .nav-list {
-    gap: 3rem;
-  }
+	.nav-list {
+		gap: 3rem;
+	}
 }
 @media screen and (min-width: 1200px) {
-
 }

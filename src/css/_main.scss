@@ -16,7 +16,6 @@
 .quote > em {
 	color: var(--emphasis-color);
 }
-
 .author {
 	font-family: 'EB Garamond', serif;
 	align-self: flex-end;
@@ -26,8 +25,10 @@
 	display: flex;
 	flex-direction: column;
 	background-color: var(--secondary-color);
+	box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 6px 4px inset;
 }
-.cards-section-title, .gallery-title {
+.cards-section-title,
+.gallery-title {
 	display: flex;
 	align-self: flex-start;
 	align-items: center;
@@ -98,7 +99,7 @@
 	background-color: var(--primary-color);
 }
 .gallery-title {
-  max-width: 80%;
+	max-width: 80%;
 }
 
 .gallery-content {
@@ -108,16 +109,16 @@
 	flex-direction: column;
 }
 .gif-container {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .gif {
 	display: block;
 	border-radius: 10px;
-  margin-bottom: 2rem;
-  object-fit: contain;
-  max-width: 500px;
+	margin-bottom: 2rem;
+	object-fit: contain;
+	max-width: 500px;
 }
 
 @media screen and (min-width: 576px) {
@@ -149,7 +150,7 @@
 	}
 	.gallery-content {
 		flex-direction: row;
-    gap: 2rem;
+		gap: 2rem;
 	}
 
 	.gif {

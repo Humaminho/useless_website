@@ -1,12 +1,13 @@
 import Burger from './Burger.tsx';
 interface HeaderProps {
-  randomizePalette: () => void;
+	randomizePalette: () => void;
 }
 export default function Header({ randomizePalette }: HeaderProps) {
 	function handleBurgerClick(): void {
-		console.log('clicked');
-		const navList = document.querySelector('.burger-nav');
-		navList?.classList.toggle('burger-nav-active');
+		const navList = document.querySelector('.burger-nav-container');
+		navList?.classList.add('burger-nav-container-active');
+    const html = document.querySelector('html');
+    html?.classList.add('no-scroll');
 	}
 
 	return (
@@ -31,7 +32,7 @@ export default function Header({ randomizePalette }: HeaderProps) {
 					</li>
 				</ul>
 			</nav>
-      <Burger />
+			<Burger />
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="2rem"
